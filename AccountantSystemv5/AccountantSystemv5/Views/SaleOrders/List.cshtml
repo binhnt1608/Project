@@ -1,0 +1,58 @@
+﻿@model IEnumerable<AccountantSystemv5.Models.SaleOrder>
+
+    @{
+        ViewData["Title"] = "Index";
+    }
+
+    <h2>Sale Order Index</h2>
+
+    <p>
+        <a asp-action="Index">Create New</a>
+
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.SaleOrderID)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.CustomerPO)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.SaleOrderDate)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.SaleOrderAmount)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SaleOrderID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerPO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SaleOrderDate)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.SaleOrderAmount)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.SaleOrderID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.SaleOrderID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.SaleOrderID">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>

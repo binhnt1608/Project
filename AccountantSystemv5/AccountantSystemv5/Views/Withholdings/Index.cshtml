@@ -1,0 +1,77 @@
+@model IEnumerable<AccountantSystemv5.Models.Withholding>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Withholding Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.MaritalStatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FWTBracket)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FWTLowerLimit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FWTUpperLimit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FWTRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FWTBracketBaseAmt)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaritalStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FWTBracket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FWTLowerLimit)
+                @if(item.FWTLowerLimit == 0)
+                {
+                    <label>0</label>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FWTUpperLimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FWTRate)
+                @if (item.FWTRate == 0)
+                {
+                    <label>0</label>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FWTBracketBaseAmt)
+                @if (item.FWTBracketBaseAmt == 0)
+                {
+                    <label>0</label>
+                }
+            </td>
+            <td>
+                
+                <a asp-action="Details" asp-route-id="@item.MaritalStatusID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.MaritalStatusID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

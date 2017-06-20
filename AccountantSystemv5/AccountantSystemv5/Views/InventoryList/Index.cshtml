@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AccountantSystemv5.Models.InventoryList>
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Inventory List</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Inventory.InventoryID)
+            </th>
+            <th>
+               Description
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Inventory.InventoryListPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <form id="item.Inventory.InventoryID" asp-action="AddToCart" asp-controller="InventoryList" method="post">
+                <input type="hidden" asp-for="item.Inventory.InventoryID" />
+                <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Inventory.InventoryID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.InventoryDiameter.InventoryDiameterDescription)
+                        @Html.DisplayFor(modelItem => item.InventoryComposition.InventoryCompositionDescription)
+                        @Html.DisplayFor(modelItem => item.InventoryType.InventoryTypeDescription)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Inventory.InventoryListPrice)
+                    </td>
+                    <td>
+                        <button type="submit" class="btn btn-success btn-sm pull-right">
+                            Add To Cart
+                        </button>
+                    </td>
+                </tr>
+            </form>
+        }
+    </tbody>
+</table>
+

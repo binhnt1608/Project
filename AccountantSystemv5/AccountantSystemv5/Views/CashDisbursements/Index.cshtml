@@ -1,0 +1,71 @@
+@model IEnumerable<AccountantSystemv5.Models.CashDisbursement>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Cash Disbursement Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.VendorID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EmployeeID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CashDisbursementAmount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CashDisbursementDate)
+                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashAccount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CashDisbursementType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Purchase)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashDisbursementAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashDisbursementDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashAccount.AccountDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CashDisbursementType.EventTypeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Purchase.ReceivingReportVendorInvoiceID)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CheckNumber">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CheckNumber">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CheckNumber">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

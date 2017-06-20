@@ -1,0 +1,9 @@
+F:\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.deps.json
+F:\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.runtimeconfig.json
+F:\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.runtimeconfig.dev.json
+F:\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.dll
+F:\AccountantSystemv5\AccountantSystemv5\bin\Debug\netcoreapp1.1\AccountantSystemv5.pdb
+F:\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\AccountantSystemv5.AssemblyInfo.cs
+F:\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\AccountantSystemv5.dll
+F:\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\AccountantSystemv5.pdb
+F:\AccountantSystemv5\AccountantSystemv5\obj\Debug\netcoreapp1.1\AccountantSystemv5.csprojResolveAssemblyReference.cache

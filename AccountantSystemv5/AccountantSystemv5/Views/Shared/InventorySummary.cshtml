@@ -1,0 +1,58 @@
+﻿@model Inventory
+
+@*<div class="well">
+    <h3>
+        <strong>@Model.InventoryID</strong>
+        <span class="pull-right label label-primary">
+
+            @Model.InventoryListPrice.ToString("c")
+        </span>
+
+    </h3>*@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Composition</th>
+            <th>Diameter</th>
+            <th>Type</th>
+            <th>List Price</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @Model.InventoryCompositionID
+            </td>
+            <td>
+                @Model.InventoryDiameterID
+            </td>
+            <td>
+                @Model.InventoryTypeID
+            </td>
+            <td>
+                @Model.InventoryListPrice
+            </td>
+            <form id="@Model.InventoryID" asp-action="AddToCart" asp-controller="Cart" method="post">
+                <input type="hidden" asp-for="InventoryID" />
+                <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+                <td>
+                    <input name="price" value="@Model.InventoryListPrice" />
+                </td>
+                <td>
+                    <input name="quantity" value="1" />
+                </td>
+                <td>
+                    <span class="lead">
+                        <button type="submit" class="btn btn-success btn-sm pull-right">
+                            Add to Cart
+                        </button>
+                    </span>
+                </td>
+            </form>
+        </tr>
+    </tbody>
+</table>
+@*</div>*@

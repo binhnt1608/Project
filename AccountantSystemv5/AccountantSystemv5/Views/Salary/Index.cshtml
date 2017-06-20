@@ -1,0 +1,102 @@
+@model IEnumerable<AccountantSystemv5.Models.Salary>
+@{
+    ViewData["Title"] = "Index";
+}
+<h1 style="text-align:center; color:red">Salary</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th style="background-color:khaki">
+                @Html.DisplayNameFor(model => model.Employee.EmployeeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LaborAcquisition.LAPayPeriodEnded)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Employee.EmPayRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LaborAcquisition.LARegularTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LaborAcquisition.LAOvertime)
+            </th>
+            <th>
+               Regular Pay
+            </th>
+            <th>
+               Time Over Pay
+            </th>
+            <th style="background-color:aqua">
+               Gross Pay
+            </th>
+            <th style="background-color:lightsteelblue">
+               FWT
+            </th>
+            <th style="background-color:lightgray">
+               FICA
+            </th>
+            <th style="background-color:lightsalmon">
+               Medicare
+            </th>
+            <th style="background-color:gold">
+               Net Pay
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td  style="background-color:khaki">
+                    @Html.DisplayFor(modelItem => item.Employee.EmployeeLastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LaborAcquisition.LAPayPeriodEnded)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employee.EmPayRate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LaborAcquisition.LARegularTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LaborAcquisition.LAOvertime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem =>item.RegularPay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OverTimePay)
+                    @if (item.OverTimePay == 0)
+                    {
+                        <label>0</label>
+                    }
+                   
+                </td>
+                <td style="background-color:aqua">
+                    @Html.DisplayFor(modelItem => item.GrossPay)
+                </td>
+                <td style="background-color:lightsteelblue">
+                    @Html.DisplayFor(modelItem => item.FWT)
+                    @if (item.FWT == 0)
+                    {
+                        <label>0</label>
+
+                    }
+                </td>
+                <td style="background-color:lightgray">
+                    @Html.DisplayFor(modelItem => item.FICA)
+                </td>
+                <td style="background-color:lightsalmon">
+                    @Html.DisplayFor(modelItem => item.Medicare)
+                </td>
+                <td style="background-color:gold">
+                    @Html.DisplayFor(modelItem => item.NetPay)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

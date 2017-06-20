@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Financing";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/process.css">
+</head>
+<h1 style="text-align:center; background-color:turquoise">Financing</h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <div class="carousel-inner" role="listbox">
+        <table class="myImg">
+            <tr>
+                <td>
+                    <span id="btn1" class="btn"><a asp-area="" asp-controller="StockHolderCreditors" asp-action="Index">Stock Holder Creditor</a></span>
+                </td>
+                <td>
+                    <span id="btn2" class="btn"><a asp-area="" asp-controller="StockSubscriptions" asp-action="Index">Stock Subscription</a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="btn3" class="btn"><a asp-area="" asp-controller="LoanAgreements" asp-action="Index">Loan Agreement</a></span>
+                </td>
+            </tr>
+           
+        </table>
+        </div>
+    </div>
+        @*<ul style="list-style-type:none">
+                <li><a asp-area="" asp-controller="Customers" asp-action="Index">Customer</a></li>
+                <li><a asp-area="" asp-controller="Inventories" asp-action="Index">Inventory</a></li>
+                <li><a asp-area="" asp-controller="InventoryCompositions" asp-action="Index">Inventory Compositionr</a></li>
+                <li><a asp-area="" asp-controller="InventoryDiameters" asp-action="Index">Inventory Diameter</a></li>
+                <li><a asp-area="" asp-controller="InventoryTypes" asp-action="Index">Inventory Type</a></li>
+                <li><a asp-area="" asp-controller="Sales" asp-action="Index">Sale</a></li>
+                <li><a asp-area="" asp-controller="SaleOrders" asp-action="Index">Sale Order</a></li>
+                <li><a asp-area="" asp-controller="CashAccounts" asp-action="Index">Cash Account</a></li>
+                <li><a asp-area="" asp-controller="CashReceipts" asp-action="Index">Cash Receipt</a></li>
+
+
+            </ul>*@

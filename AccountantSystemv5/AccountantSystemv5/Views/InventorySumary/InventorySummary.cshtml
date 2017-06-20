@@ -1,0 +1,22 @@
+﻿@model AccountantSystemv5.Models.Inventory
+
+<div class="well">
+    <h3>
+        <strong>@Model.InventoryID</strong>
+        <span class="pull-right label label-primary">
+            @Model.InventoryListPrice.ToString("c")
+        </span>
+    </h3>
+    <form id="@Model.InventoryID" asp-action="AddToCart"
+          asp-controller="Cart" method="post">
+        <input type="hidden" asp-for="InventoryID" />
+        <input type="hidden" name="returnUrl"
+               value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+        <span class="lead">
+            @Model.InventoryDiameter @Model.InventoryComposition @Model.InventoryType
+            <button type="submit" class="btn btn-success btn-sm pull-right">
+                Add To Cart
+            </button>
+        </span>
+    </form>
+</div>

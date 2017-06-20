@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/process.css">
+</head>
+<h1 style="text-align:center;color:red; background-color:turquoise">ACCOUNTING INFORMATION SYSTEM</h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <div class="carousel-inner" role="listbox">
+        <table class="myImg">
+            <tr>
+                <td>
+                    <span id="btn1" class="btn"><a asp-area="" asp-controller="Home" asp-action="Sale">Sales/Collection</a></span>
+                </td>
+                <td>
+                    <span id="btn2" class="btn"><a asp-area="" asp-controller="Home" asp-action="Acquisition" >Acquisition/Payment</a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="btn3" class="btn"><a asp-area="" asp-controller="Home" asp-action="Hr">Human Resources</a></span>
+                </td>
+                <td>
+                    <span id="btn4" class="btn"><a asp-area="" asp-controller="Home" asp-action="Financing">Finacing</a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="btn3" class="btn"><a asp-area="" asp-controller="Home" asp-action="InventoryPage">Inventory</a></span>
+                </td>
+               
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+</div>
+

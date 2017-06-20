@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "Acquisition";
+}
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/process.css">
+</head>
+<h1 style="text-align:center; background-color:turquoise">Acquisition/Payment</h1>
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <div class="carousel-inner" role="listbox">
+        <table class="myImg">
+            <tr>
+                <td>
+                    <span id="btn1" class="btn"><a asp-area="" asp-controller="Vendors" asp-action="Index">Vendor</a></span>
+                </td>
+                <td>
+                    <span id="btn7" class="btn"><a asp-area="" asp-controller="CashAccounts" asp-action="Index">Cash Account</a></span>
+                </td>
+            </tr>
+         
+            <tr>
+                
+                <td>
+                    <span id="btn6" class="btn"><a asp-area="" asp-controller="Purchases" asp-action="Index">Purchase</a></span>
+                </td>
+                <td>
+                    <span id="btn8" class="btn"><a asp-area="" asp-controller="CashDisbursements" asp-action="Index">Cash Disbursement</a></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span id="btn7" class="btn"><a asp-area="" asp-controller="PurchaseOrders" asp-action="Index">Purchase Order</a></span>
+                </td>
+                
+            </tr>
+          
+           
+        </table>
+        </div>
+    </div>
+        @*<ul style="list-style-type:none">
+                <li><a asp-area="" asp-controller="Customers" asp-action="Index">Customer</a></li>
+                <li><a asp-area="" asp-controller="Inventories" asp-action="Index">Inventory</a></li>
+                <li><a asp-area="" asp-controller="InventoryCompositions" asp-action="Index">Inventory Compositionr</a></li>
+                <li><a asp-area="" asp-controller="InventoryDiameters" asp-action="Index">Inventory Diameter</a></li>
+                <li><a asp-area="" asp-controller="InventoryTypes" asp-action="Index">Inventory Type</a></li>
+                <li><a asp-area="" asp-controller="Sales" asp-action="Index">Sale</a></li>
+                <li><a asp-area="" asp-controller="SaleOrders" asp-action="Index">Sale Order</a></li>
+                <li><a asp-area="" asp-controller="CashAccounts" asp-action="Index">Cash Account</a></li>
+                <li><a asp-area="" asp-controller="CashReceipts" asp-action="Index">Cash Receipt</a></li>
+
+
+            </ul>*@

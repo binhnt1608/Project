@@ -1,0 +1,20 @@
+
+
+@model InventoryListViewModel
+
+
+<div class="container">
+    
+            @foreach (var inventory in @Model.Inventories)
+            {
+                
+                      @Html.Partial("InventorySummary", inventory)
+                
+            }
+     
+</div>
+
+@*@foreach (var p in Model.Inventories)
+{
+    @Html.Partial("InventorySummary", p)
+}*@

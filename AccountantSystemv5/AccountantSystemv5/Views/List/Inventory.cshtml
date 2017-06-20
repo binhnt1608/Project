@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Inventory>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Composition</th>
+                <th>Diameter</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var inventory in @Model)
+            {
+                <tr>
+                    <td>
+                        @inventory.InventoryType.InventoryTypeCode
+                    </td>
+                    <td>@inventory.InventoryComposition.InventoryCompositionCode</td>
+                    <td>@inventory.InventoryDiameter.InventoryDiameterCode</td>
+                    <td>@inventory.InventoryListPrice</td>
+                    <td>
+                        @Html.Partial("_InventorySummary", inventory)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
